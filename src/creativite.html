@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mind</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="Description de yourProject">
+  <meta name="keywords" content="yourProject, yourProject">
+
+  <link rel="stylesheet" href="//cdn.plyr.io/3.5.6/plyr.css">
+
+  <!-- Feuille(s) de style CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="page-player">
+
+  <div class="bg">
+    <div class="semi-circle-left"></div>
+    <div class="semi-circle-right"></div>
+    <div class="wave"></div>
+  </div>
+
+  <main class="site-main" role="main">
+    <div class="site-wrapper">
+      <a href="./index.html" class="btn btn-primary btn-prev">
+        <svg class="icon icon--arrow" aria-hidden="true">
+          <use xlink:href="./assets/img/icons/icons.svg#arrow-left"></use>
+        </svg>
+        Retour
+      </a>
+
+      <figure id="audioplayer" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+        <div></div>
+
+        <div class="audioplayer-controls">
+          <div id="playbacktime">
+            <span class="min">
+              <span class="val">00</span>
+              <span class="label">minutes</span>
+            </span>
+            <span class="separator">:</span>
+            <span class="seconds">
+              <span class="val">00</span>
+              <span class="label">secondes</span>
+            </span>
+          </div>
+
+          <div id="playback"></div>
+        </div>
+
+        <div id="playbackprogress"></div>
+        <audio controls  src="./assets/sons/créativité.mp3" id="audiotrack" preload="auto" itemprop="audio"></audio>
+      </figure>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <!-- @@include = includes/scripts.html -->
+</body>
+
+</html>

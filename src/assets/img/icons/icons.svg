@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <symbol id="btn-play" viewBox="0 0 15 21">
+    <g data-name="Calque 2"><path d="M0 1A1 1 0 0 1 1.59.19l12.83 9a2 2 0 0 1-.07 2.76L1.61 21.12A1 1 0 0 1 0 20.3z" data-name="Calque 1"/></g>
+  </symbol>
+
+  <symbol id="btn-pause" viewBox="0 0 60 75">
+    <rect x="35" width="24" height="75" rx="10" /><rect width="24" height="75" rx="10" />
+  </symbol>
+
+  <symbol id="arrow-left" viewBox="0 0 26 48">
+    <g data-name="Calque 2"><path fill="none" stroke="#fff0e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24.2 46.4L2 24.2 24.2 2" data-name="Calque 1"/></g>
+  </symbol>
+
+  <!-- <symbol id="arrows-left" viewBox="0 0 65 49">
+    <path d="M24 2L2.684 23.8a1 1 0 0 0 0 1.4L24 47" stroke="#FFF0E3" stroke-width="3.5" stroke-miterlimit="16" stroke-linecap="round"/><path d="M44 2L22.684 23.8a1 1 0 0 0 0 1.4L44 47" stroke="#FFF0E3" stroke-width="3.5" stroke-miterlimit="16" stroke-linecap="round"/><path d="M63 2L41.684 23.8a1 1 0 0 0 0 1.4L63 47" stroke="#FFF0E3" stroke-width="3.5" stroke-miterlimit="16" stroke-linecap="round"/>
+  </symbol> -->
+
+  <symbol id="arrows-left" viewBox="0 0 66 49">
+    <g clip-path="url(#clip0)" stroke="#FFF0E3" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"><path d="M24.2 46.4L2 24.2 24.2 2"/><path d="M44.2 46.4L22 24.2 44.2 2"/><path d="M63.2 46.4L41 24.2 63.2 2"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h65.2v48.4H0z"/></clipPath></defs>
+  </symbol>
+
+</svg>
