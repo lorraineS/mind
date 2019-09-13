@@ -21,31 +21,31 @@ $(document).ready(function() {
 function player() {
   if (audioTrack.paused) {
     playButton.setAttribute("aria-label", "stop");
-
     playButton.innerHTML = `<svg class='icon icon--pause' aria-hidden='true'>
                               <use xlink:href='./assets/img/icons/icons.svg#btn-pause'></use>
                             </svg>`;
+
     audioTrack.play();
 	} else {
     playButton.setAttribute("aria-label", "play pause toggle");
     playButton.innerHTML = `<svg class='icon icon--play' aria-hidden='true'>
-                              <use xlink:href='./assets/img/icons/icons.svg#btn-play'></use>
-                            </svg>`;
+                            <use xlink:href='./assets/img/icons/icons.svg#btn-play'></use>
+                          </svg>`;
     audioTrack.pause();
   }
 }
 
 function playerVideo() {
   if (videoTrack.paused) {
-    videoPlayButton.setAttribute("aria-label", "stop");
-    videoPlayButton.innerHTML = `<svg class='icon icon--pause' aria-hidden='true'>
-                                  <use xlink:href='./assets/img/icons/icons.svg#btn-pause'></use>
-                                </svg>`;
-    videoTrack.play();
-	} else {
     videoPlayButton.setAttribute("aria-label", "play pause toggle");
     videoPlayButton.innerHTML = `<svg class='icon icon--play' aria-hidden='true'>
                                   <use xlink:href='./assets/img/icons/icons.svg#btn-play'></use>
+                                </svg>`;
+    videoTrack.play();
+	} else {
+    videoPlayButton.setAttribute("aria-label", "stop");
+    videoPlayButton.innerHTML = `<svg class='icon icon--pause' aria-hidden='true'>
+                                  <use xlink:href='./assets/img/icons/icons.svg#btn-pause'></use>
                                 </svg>`;
     videoTrack.pause();
   }
@@ -81,17 +81,19 @@ var audioPlayer = document.getElementById("audioplayer"),
     playButton = document.createElement("button"),
     playhead = document.createElement("progress")
 
-setAttributes(playButton, { "aria-label": "play pause toggle" });
-playButton.innerHTML = `<svg class='icon icon--play' aria-hidden='true'>
-                          <use xlink:href='./assets/img/icons/icons.svg#btn-play'></use>
-                        </svg>`;
+
 
 if (duration) {
   var duration = audioTrack.duration;
 }
 
 if (audioPlayer) {
-  setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
+  setAttributes(playButton, { "aria-label": "stop" });
+  playButton.innerHTML = `<svg class='icon icon--pause' aria-hidden='true'>
+                            <use xlink:href='./assets/img/icons/icons.svg#btn-pause'></use>
+                          </svg>`;
+
+  //setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
   playback.appendChild(playButton);
   playbackProgress.appendChild(playhead);
   audioTrack.removeAttribute("controls");
