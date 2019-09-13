@@ -67,6 +67,12 @@ function updatePlayhead() {
   playbacktime.querySelector('.seconds .val').innerHTML = s
 }
 
+function seek(e) {
+  var percent = e.offsetX / this.offsetWidth;
+  audioPlayer.currentTime = percent * audioPlayer.duration;
+  playhead.value = percent / 100;
+}
+
 function setAttributes(el, attrs) {
 	for(var key in attrs){
 		el.setAttribute(key, attrs[key]);
@@ -93,13 +99,14 @@ if (audioPlayer) {
                             <use xlink:href='./assets/img/icons/icons.svg#btn-pause'></use>
                           </svg>`;
 
-  //setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
+  setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
   playback.appendChild(playButton);
   playbackProgress.appendChild(playhead);
   audioTrack.removeAttribute("controls");
   playButton.addEventListener("click", player, false);
   audioTrack.addEventListener('playing', function() { playhead.max = audioTrack.duration; }, false);
   audioTrack.addEventListener('timeupdate', updatePlayhead, false);
+  playhead.addEventListener("click", seek);
   audioTrack.addEventListener('ended', finish, false);
 }
 

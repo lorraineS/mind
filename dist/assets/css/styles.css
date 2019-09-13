@@ -4994,6 +4994,7 @@ div#fader {
   display: block;
   overflow: hidden;
   height: 9px;
+  cursor: pointer;
   color: #4447e2;
   border: none;
   border-radius: 10px;

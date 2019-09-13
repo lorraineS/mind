@@ -112,6 +112,7 @@ div#fader { display: inline-block; }
   width: 100%;
 
   progress {
+    cursor: pointer;
     appearance: none;
     background-color: #FFF2E8;
     border-radius: 10px;
