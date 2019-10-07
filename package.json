@@ -18,7 +18,7 @@
     "clipboard": "^2.0.4",
     "del": "^3.x",
     "dragula": "^3.7.2",
-    "gulp": "^3.x",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.x",
     "gulp-babel": "^7.x",
     "gulp-changed": "^3.x",
