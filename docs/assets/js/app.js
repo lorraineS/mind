@@ -69,8 +69,8 @@ function updatePlayhead() {
 
 function seek(e) {
   var percent = e.offsetX / this.offsetWidth;
-  audioPlayer.currentTime = percent * audioPlayer.duration;
-  playhead.value = percent / 100;
+  audioTrack.currentTime = percent * audioTrack.duration;
+  playhead.value = percent * 100;
 }
 
 function setAttributes(el, attrs) {
@@ -102,11 +102,11 @@ if (audioPlayer) {
   setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
   playback.appendChild(playButton);
   playbackProgress.appendChild(playhead);
+  playhead.addEventListener("click", seek);
   audioTrack.removeAttribute("controls");
   playButton.addEventListener("click", player, false);
   audioTrack.addEventListener('playing', function() { playhead.max = audioTrack.duration; }, false);
   audioTrack.addEventListener('timeupdate', updatePlayhead, false);
-  playhead.addEventListener("click", seek);
   audioTrack.addEventListener('ended', finish, false);
 }
 
