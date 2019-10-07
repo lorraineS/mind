@@ -111,17 +111,6 @@ if (audioPlayer) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* Player Vidéo */
 
 var videoplayer = document.getElementById("videoplayer"),
